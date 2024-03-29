@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 00:51:09 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/03/27 18:20:12 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/03/29 16:43:54 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 
 typedef struct stack_node
 {
@@ -23,19 +24,25 @@ typedef struct stack_node
 	struct stack_node	*next;
 }	t_stack;
 
-void	swap_stack(t_stack **lst);
+void	stack_init(t_stack **stack_a, char **argv);
+
 void	_sa(t_stack **stack_a);
 void	_sb(t_stack **stack_b);
 void	_ss(t_stack **stack_a, t_stack **stack_b);
 
-void	rotate_stack(t_stack **lst);
 void	_ra(t_stack **stack_a);
 void	_rb(t_stack **stack_b);
 void	_rr(t_stack **stack_a, t_stack **stack_b);
 
-void	reverse_rotate(t_stack **lst);
 void	_rra(t_stack **stack_a);
 void	_rrb(t_stack **stack_b);
 void	_rrr(t_stack **stack_a, t_stack **stack_b);
+
+void	_pa(t_stack **stack_a, t_stack **stack_b);
+void	_pb(t_stack **stack_a, t_stack **stack_b);
+
+char	**ft_split(char const *s, char c);
+long	str_to_long(char *s);
+int		check_valid_integer(char *s);
 
 #endif
