@@ -6,11 +6,12 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 17:14:50 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/03/29 15:57:52 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/03/29 18:34:56 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
 
 int	main(int argc, char **argv)
 {
@@ -23,8 +24,7 @@ int	main(int argc, char **argv)
 		return (1);
 	else if (argc == 2)
 		argv = ft_split(argv[1], ' ');
-    stack_init(a, argv);
-	 
+    stack_init(&a, argv);
 }
 
 /* t_stack* newNode(int value) {

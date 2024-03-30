@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 23:42:52 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/03/29 16:41:21 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/03/29 18:33:39 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,17 @@ int	check_valid_integer(char *s)
 			return (0);
 	}
 	return (1);
+}
+
+int	check_duplicate(t_stack *stack, long nbr)
+{
+	if (stack == NULL)
+		return (0);
+	while (stack)
+	{
+		if (stack->value == nbr)
+			return (1);
+		stack = stack->next;
+	}
+	return (0);
 }
