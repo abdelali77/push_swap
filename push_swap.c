@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 17:14:50 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/03/29 18:34:56 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/03/30 17:45:04 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,37 @@ int	main(int argc, char **argv)
 		return (1);
 	else if (argc == 2)
 		argv = ft_split(argv[1], ' ');
-    stack_init(&a, argv);
+	stack_init(&a, argv);
+	int	i = 0;
+	t_stack *tmp = a;
+	while (tmp)
+	{
+		tmp = tmp->next;
+		i++;
+	}
+	tmp = a;
+	while (i > 0)
+	{
+		int	n;
+		while (tmp->next)
+		{
+			if (tmp->value > tmp->next->value)
+			{
+				n = tmp->value;
+				tmp->value = tmp->next->value;
+				tmp->next->value = n;
+			}
+			tmp = tmp->next;
+		}
+		tmp = a;
+		i--;
+	}
+	tmp = a;
+	while (tmp)
+	{
+		printf("%d\n", tmp->value);
+		tmp = tmp->next;
+	}
 }
 
 /* t_stack* newNode(int value) {
