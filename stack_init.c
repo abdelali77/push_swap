@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 00:35:02 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/03/29 18:28:03 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/03/30 17:42:28 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	stack_init(t_stack **stack_a, char **argv)
 	long	nbr;
 	int		i;
 
-	i = 1;
+	i = 0;
 	while (argv[i])
 	{
 		if (!check_valid_integer(argv[i]))
