@@ -6,7 +6,7 @@
 #    By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/18 22:15:23 by abmahfou          #+#    #+#              #
-#    Updated: 2024/03/28 01:45:24 by abmahfou         ###   ########.fr        #
+#    Updated: 2024/03/31 17:51:06 by abmahfou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,13 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 SRC = push_swap.c \
-	split.c
+	  split.c \
+      push.c \
+      reverse_rotate.c \
+      rotate.c \
+      stack_init.c \
+      swap.c \
+      utils.c
 
 all: 
 	$(cc) $(CFLAGS) $(SRC) -o $(NAME)
