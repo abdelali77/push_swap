@@ -6,7 +6,7 @@
 #    By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/18 22:15:23 by abmahfou          #+#    #+#              #
-#    Updated: 2024/03/31 17:51:06 by abmahfou         ###   ########.fr        #
+#    Updated: 2024/04/01 01:07:29 by abmahfou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,8 @@ SRC = push_swap.c \
       rotate.c \
       stack_init.c \
       swap.c \
-      utils.c
+      utils.c \
+	  algo.c 
 
 all: 
 	$(cc) $(CFLAGS) $(SRC) -o $(NAME)
