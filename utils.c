@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 23:42:52 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/03/31 22:16:57 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/02 17:30:36 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,13 +70,16 @@ int	check_duplicate(t_stack *stack, long nbr)
 
 bool	is_sorted(t_stack **stack)
 {
-	if (stack == NULL)
+	t_stack	*tmp;
+
+	tmp = *stack;
+	if (tmp == NULL)
 		return (true);
-	while ((*stack)->next)
+	while (tmp->next)
 	{
-		if ((*stack)->value > (*stack)->next->value)
+		if (tmp->value > tmp->next->value)
 			return (false);
-		(*stack) = (*stack)->next;
+		tmp = tmp->next;
 	}
 	return (true);
 }

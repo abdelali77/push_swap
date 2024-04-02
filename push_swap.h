@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 00:51:09 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/01 01:08:29 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/02 17:25:54 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>
 # include <limits.h>
 # include <stdbool.h>
+#include <stdio.h>
 
 typedef struct stack_node
 {
