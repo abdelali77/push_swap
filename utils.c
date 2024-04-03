@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 23:42:52 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/02 17:30:36 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/02 22:01:05 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,4 +82,19 @@ bool	is_sorted(t_stack **stack)
 		tmp = tmp->next;
 	}
 	return (true);
+}
+
+size_t	lst_size(t_stack **lst)
+{
+	t_stack	*tmp;
+	size_t	count;
+
+	count = 0;
+	tmp = *lst;
+	while (tmp)
+	{
+		tmp = tmp->next;
+		count++;
+	}
+	return (count);
 }

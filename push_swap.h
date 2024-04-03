@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 00:51:09 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/02 17:25:54 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/02 23:10:53 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ long	str_to_long(char *s);
 int		check_valid_integer(char *s);
 int		check_duplicate(t_stack *stack, long nbr);
 bool	is_sorted(t_stack **stack);
-void	check_algo(t_stack **stack);
+void	check_algo(t_stack **a, t_stack **b);
+size_t	lst_size(t_stack **lst);
+int		min_el(t_stack **stack);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 17:14:50 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/02 17:34:19 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/02 23:12:23 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ int	main(int argc, char **argv)
 	if (is_sorted(&a) == true)
 		return (0);
 	else
-		check_algo(&a);
+		check_algo(&a, &b);
 }
