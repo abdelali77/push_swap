@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 22:23:47 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/03 00:00:01 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/03 21:56:14 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,20 +41,26 @@ void	sort_stack_3(t_stack **s)
 
 void	sort_stack_5(t_stack **a, t_stack **b)
 {
-	
+	_pb(a, b);
+	_pb(a, b);
+	_sa(a);
+	_ra(a);
+	_pa(a, b);
+	_ra(a);
+	_pa(a, b);
 }
 
 void	check_algo(t_stack **a, t_stack **b)
 {
 	if (a == NULL || b == NULL)
 		return ;
-	if (lst_size(a) == 2)
+	if (stack_size(a) == 2)
 	{
 		if ((*a)->value > (*a)->next->value)
 			_sa(a);
 	}
-	else if (lst_size(a) == 3)
+	else if (stack_size(a) == 3)
 		sort_stack_3(a);
-	else if (lst_size(a) == 5)
+	else if (stack_size(a) == 5)
 		sort_stack_5(a, b);
 }
