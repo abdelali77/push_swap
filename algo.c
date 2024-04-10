@@ -41,13 +41,7 @@ void	sort_stack_3(t_stack **s)
 
 void	sort_stack_5(t_stack **a, t_stack **b)
 {
-	_pb(a, b);
-	_pb(a, b);
-	_sa(a);
-	_ra(a);
-	_pa(a, b);
-	_ra(a);
-	_pa(a, b);
+	
 }
 
 void	check_algo(t_stack **a, t_stack **b)
