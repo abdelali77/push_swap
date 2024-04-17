@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 00:51:09 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/17 15:41:48 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/17 17:05:32 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <limits.h>
 # include <stdbool.h>
 #include <stdio.h>
+#include <string.h>
 
 typedef struct stack_node
 {
@@ -51,5 +52,6 @@ int		check_duplicate(t_stack *stack, long nbr);
 bool	is_sorted(t_stack **stack);
 void	check_algo(t_stack **a, t_stack **b);
 size_t	stack_size(t_stack **lst);
+void	re_index(t_stack **stack);
 
 #endif
