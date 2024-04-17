@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 00:51:09 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/03 23:06:30 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:41:48 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct stack_node
 	int					value;
 	struct stack_node	*prev;
 	struct stack_node	*next;
+	int					index;
 }	t_stack;
 
 void	stack_init(t_stack **stack_a, char **argv);
@@ -50,6 +51,5 @@ int		check_duplicate(t_stack *stack, long nbr);
 bool	is_sorted(t_stack **stack);
 void	check_algo(t_stack **a, t_stack **b);
 size_t	stack_size(t_stack **lst);
-t_stack	*min_el(t_stack **lst);
 
 #endif

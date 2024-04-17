@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 00:35:02 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/03/31 18:22:10 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/17 13:23:33 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ t_stack	*find_last_node(t_stack *last_node)
 
 void	append_node(t_stack **stack, long nbr)
 {
+	static int	index;
 	t_stack	*node;
 	t_stack	*last_node;
 
@@ -32,6 +33,8 @@ void	append_node(t_stack **stack, long nbr)
 	if (node == NULL)
 		return ;
 	node->value = nbr;
+	node->index = index;
+	index++;
 	node->next = NULL;
 	if (*stack == NULL)
 		*stack = node;
