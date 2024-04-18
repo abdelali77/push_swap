@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 22:23:47 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/17 17:00:48 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/18 20:49:04 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	sort_stack_2_3(t_stack **s)
 {
 	if (*s == max_el(s))
 		_ra(s);
-	else if (max_el(s)->index == 1)
+	else if (max_el(s) == (*s)->next)
 		_rra(s);
 	if ((*s)->value > (*s)->next->value)
 		_sa(s);
@@ -64,7 +64,6 @@ void	sort_stack_4_5(t_stack **a, t_stack **b)
 			_ra(a);
 	}
 	_pb(a, b);
-	re_index(a);
 	while (min_el(a) != *a)
 	{
 		if (min_el(a)->index > 2)
@@ -72,7 +71,6 @@ void	sort_stack_4_5(t_stack **a, t_stack **b)
 		else
 			_ra(a);
 	}
-	re_index(a);
 	_pb(a, b);
 	sort_stack_2_3(a);
 	_pa(a, b);
