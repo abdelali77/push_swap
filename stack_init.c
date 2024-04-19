@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 00:35:02 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/18 15:40:39 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/19 15:46:31 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,6 @@ t_stack	*find_last_node(t_stack *last_node)
 	while (last_node->next)
 		last_node = last_node->next;
 	return (last_node);
-}
-
-void	re_index(t_stack *stack)
-{
-	int			index;
-	t_stack		*tmp;
-
-	index = 0;
-	tmp = stack;
-	while (tmp)
-	{
-		tmp->index = index;
-		index++;
-		tmp = tmp->next;
-	}
 }
 
 void	append_node(t_stack **stack, long nbr)
@@ -74,12 +59,7 @@ void	stack_init(t_stack **stack_a, char **argv)
 			return ;
 		}
 		nbr = str_to_long(argv[i]);
-		if (nbr < INT_MIN || nbr > INT_MAX)
-		{
-			write(2, "Error\n", 6);
-			return ;
-		}
-		if (check_duplicate(*stack_a, nbr))
+		if ((nbr < INT_MIN || nbr > INT_MAX) || check_duplicate(*stack_a, nbr))
 		{
 			write(2, "Error\n", 6);
 			return ;
