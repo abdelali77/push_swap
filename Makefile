@@ -6,13 +6,15 @@
 #    By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/18 22:15:23 by abmahfou          #+#    #+#              #
-#    Updated: 2024/04/03 22:50:44 by abmahfou         ###   ########.fr        #
+#    Updated: 2024/04/20 13:23:49 by abmahfou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
 CC = cc
+
+RM = rm -rf
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -24,7 +26,8 @@ SRC = push_swap.c \
       stack_init.c \
       swap.c \
       utils.c \
-	  algo.c 
+	  algo.c \
+	  algo2.c 
 
 OBJS = $(SRC:.c=.o)
 
@@ -42,9 +45,9 @@ $(NAME): $(OBJS) $(HEADER)
 	@echo "╚═╝      ╚═════╝ ╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝ ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝     "
 
 clean:
-	rm -rf $(OBJS)
+	$(RM) $(OBJS)
 
 fclean: clean
-	rm -rf $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
