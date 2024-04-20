@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 00:51:09 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/19 15:46:39 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/20 16:10:33 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,7 @@ int		check_duplicate(t_stack *stack, long nbr);
 bool	is_sorted(t_stack **stack);
 void	check_algo(t_stack **a, t_stack **b);
 size_t	stack_size(t_stack **lst);
+void	sort_stack_100(t_stack **a, t_stack **b);
+void	indexing_stack(t_stack *stack);
 
 #endif
