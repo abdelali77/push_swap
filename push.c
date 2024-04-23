@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 18:18:02 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/18 15:55:44 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/22 15:28:55 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,18 @@ void	ft_push(t_stack **lst, t_stack **new)
 	*new = tmp;
 }
 
-void	_pa(t_stack **stack_a, t_stack **stack_b)
+void	_pa(t_stack **lst, t_stack **new)
 {
-	if (*stack_b == NULL)
+	if (*lst == NULL)
 		return ;
-	ft_push(stack_b, stack_a);
+	ft_push(lst, new);
 	write(1, "pa\n", 3);
 }
 
-void	_pb(t_stack **stack_a, t_stack **stack_b)
+void	_pb(t_stack **lst, t_stack **new)
 {
-	if (*stack_a == NULL)
+	if (*lst == NULL)
 		return ;
-	ft_push(stack_a, stack_b);
+	ft_push(lst, new);
 	write(1, "pb\n", 3);
 }
