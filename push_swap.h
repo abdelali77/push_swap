@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 00:51:09 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/20 16:10:33 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/23 11:24:19 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,12 @@
 # include <unistd.h>
 # include <limits.h>
 # include <stdbool.h>
-#include <stdio.h>
 
 typedef struct stack_node
 {
 	int					value;
-	struct stack_node	*prev;
 	struct stack_node	*next;
-	int					index;
+	unsigned long		index;
 }	t_stack;
 
 void	stack_init(t_stack **stack_a, char **argv);
@@ -51,7 +49,12 @@ int		check_duplicate(t_stack *stack, long nbr);
 bool	is_sorted(t_stack **stack);
 void	check_algo(t_stack **a, t_stack **b);
 size_t	stack_size(t_stack **lst);
-void	sort_stack_100(t_stack **a, t_stack **b);
+void	sort_stack(t_stack **a, t_stack **b, int range);
 void	indexing_stack(t_stack *stack);
+t_stack	*find_last_node(t_stack *last_node);
+t_stack	*min_el(t_stack **lst);
+t_stack	*max_el(t_stack **lst);
+void	error(void);
+void	re_index(t_stack *stack);
 
 #endif
