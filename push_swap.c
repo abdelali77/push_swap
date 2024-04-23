@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 17:14:50 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/20 16:11:39 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/23 11:23:59 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	main(int argc, char **argv)
 	{
 		if (is_only_space(argv[1]))
 		{
-			write(1, "Error\n", 6);
+			write(2, "Error\n", 6);
 			return (1);
 		}
 		argv = ft_split(argv[1], ' ');
@@ -57,11 +57,4 @@ int	main(int argc, char **argv)
 		return (0);
 	else
 		check_algo(&a, &b);
-	indexing_stack(a);
-	t_stack *tmp = a;
-	while (tmp)
-	{
-		printf("[%d]->index{%d}\n", tmp->value, tmp->index);
-		tmp = tmp->next;
-	}
 }
