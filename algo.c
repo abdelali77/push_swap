@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 22:23:47 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/20 16:06:23 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/22 15:55:58 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,14 @@ t_stack	*min_el(t_stack **lst)
 	return (min);
 }
 
-void	sort_stack_2_3(t_stack **s)
+void	sort_stack_2_3(t_stack **stack)
 {
-	if (*s == max_el(s))
-		_ra(s);
-	else if (max_el(s) == (*s)->next)
-		_rra(s);
-	if ((*s)->value > (*s)->next->value)
-		_sa(s);
+	if (*stack == max_el(stack))
+		_ra(stack);
+	else if (max_el(stack) == (*stack)->next)
+		_rra(stack);
+	if ((*stack)->value > (*stack)->next->value)
+		_sa(stack);
 }
 
 void	sort_stack_4_5(t_stack **a, t_stack **b)
@@ -73,8 +73,8 @@ void	sort_stack_4_5(t_stack **a, t_stack **b)
 	}
 	_pb(a, b);
 	sort_stack_2_3(a);
-	_pa(a, b);
-	_pa(a, b);
+	_pa(b, a);
+	_pa(b, a);
 }
 
 void	check_algo(t_stack **a, t_stack **b)
@@ -85,6 +85,14 @@ void	check_algo(t_stack **a, t_stack **b)
 		sort_stack_2_3(a);
 	else if (stack_size(a) <= 5)
 		sort_stack_4_5(a, b);
-	// else if (stack_size(a) <= 100)
-	// 	sort_stack_100(a, b);
+	else if (stack_size(a) <= 100)
+	{
+		indexing_stack(*a);
+		sort_stack(a, b, 15);
+	}
+	else
+	{
+		indexing_stack(*a);
+		sort_stack(a, b, 32);
+	}
 }
