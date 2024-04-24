@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algo_big.c                                         :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/19 15:58:25 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/19 15:59:25 by abmahfou         ###   ########.fr       */
+/*   Created: 2024/01/15 10:25:28 by abmahfou          #+#    #+#             */
+/*   Updated: 2024/01/29 14:52:07 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-void	sort_stack_100(t_stack **a, t_stack **b)
-{
-	
-}
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
+
+# include <stdlib.h>
+# include <unistd.h>
+
+char	*get_next_line(int fd);
+char	*ft_strjoin(char *s1, char *s2);
+int		found_newline(char *line);
+char	*line_remaining(char *line);
+size_t	ft_strlen(const char *str);
+
+#endif
