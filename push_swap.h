@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 00:51:09 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/23 11:24:19 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/23 11:37:04 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ void	_rra(t_stack **stack_a);
 void	_rrb(t_stack **stack_b);
 void	_rrr(t_stack **stack_a, t_stack **stack_b);
 
-void	_pa(t_stack **stack_a, t_stack **stack_b);
-void	_pb(t_stack **stack_a, t_stack **stack_b);
+void	_pa(t_stack **lst, t_stack **new);
+void	_pb(t_stack **lst, t_stack **new);
 
 char	**ft_split(char const *s, char c);
 long	str_to_long(char *s);

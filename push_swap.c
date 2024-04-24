@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 17:14:50 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/23 11:23:59 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/23 21:01:25 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,10 @@ int	main(int argc, char **argv)
 
 	a = NULL;
 	b = NULL;
-	if (argc == 1 || (argc == 2 && argv[1][0] == '\0'))
+	if (argc == 1)
 		return (1);
+	else if (argc == 2 && argv[1][0] == '\0')
+		error();
 	else if (argc == 2)
 	{
 		if (is_only_space(argv[1]))
