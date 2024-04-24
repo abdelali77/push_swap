@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 13:23:54 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/23 11:14:00 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/23 11:35:32 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,21 +30,6 @@ void	indexing_stack(t_stack *stack)
 		}
 		x = x->next;
 	}
-}
-
-size_t	distance_from_top(t_stack *stack, t_stack *element)
-{
-	t_stack	*tmp;
-	int		distance;
-
-	tmp = stack;
-	distance = 0;
-	while (tmp && tmp != element)
-	{
-		tmp = tmp->next;
-		distance++;
-	}
-	return (distance);
 }
 
 void	sort_stack_extra(t_stack **a, t_stack **b)
