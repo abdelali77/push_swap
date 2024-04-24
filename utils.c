@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   utils2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/28 23:42:52 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/22 15:18:56 by abmahfou         ###   ########.fr       */
+/*   Created: 2024/04/22 15:00:01 by abmahfou          #+#    #+#             */
+/*   Updated: 2024/04/23 12:35:24 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,34 +40,33 @@ long	str_to_long(char *s)
 	return (nbr * sign);
 }
 
-int	check_valid_integer(char *s)
+size_t	stack_size(t_stack **lst)
 {
-	int	i;
+	t_stack	*tmp;
+	size_t	count;
 
-	i = 0;
-	if (s[i] == '-' || s[i] == '+')
-		i++;
-	while (s[i])
+	count = 0;
+	tmp = *lst;
+	while (tmp)
 	{
-		if (s[i] >= '0' && s[i] <= '9')
-			i++;
-		else
-			return (0);
+		tmp = tmp->next;
+		count++;
 	}
-	return (1);
+	return (count);
 }
 
-int	check_duplicate(t_stack *stack, long nbr)
+void	re_index(t_stack *stack)
 {
-	if (stack == NULL)
-		return (0);
-	while (stack)
+	unsigned long	index;
+	t_stack			*tmp;
+
+	index = 0;
+	tmp = stack;
+	while (tmp)
 	{
-		if (stack->value == nbr)
-			return (1);
-		stack = stack->next;
+		tmp->index = index++;
+		tmp = tmp->next;
 	}
-	return (0);
 }
 
 bool	is_sorted(t_stack **stack)
@@ -84,19 +83,4 @@ bool	is_sorted(t_stack **stack)
 		tmp = tmp->next;
 	}
 	return (true);
-}
-
-size_t	stack_size(t_stack **lst)
-{
-	t_stack	*tmp;
-	size_t	count;
-
-	count = 0;
-	tmp = *lst;
-	while (tmp)
-	{
-		tmp = tmp->next;
-		count++;
-	}
-	return (count);
 }
