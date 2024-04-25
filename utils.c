@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils2.c                                           :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 15:00:01 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/23 12:35:24 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/25 13:33:44 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,13 @@ long	str_to_long(char *s)
 	return (nbr * sign);
 }
 
-size_t	stack_size(t_stack **lst)
+size_t	stack_size(t_stack *lst)
 {
 	t_stack	*tmp;
 	size_t	count;
 
 	count = 0;
-	tmp = *lst;
+	tmp = lst;
 	while (tmp)
 	{
 		tmp = tmp->next;
@@ -69,18 +69,31 @@ void	re_index(t_stack *stack)
 	}
 }
 
-bool	is_sorted(t_stack **stack)
+bool	is_sorted(t_stack *stack)
 {
 	t_stack	*tmp;
 
-	tmp = *stack;
-	if (tmp == NULL)
-		return (true);
+	tmp = stack;
 	while (tmp->next)
 	{
 		if (tmp->value > tmp->next->value)
 			return (false);
 		tmp = tmp->next;
+	}
+	return (true);
+}
+
+bool	is_only_space(char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] != '\t' && s[i] != '\n' && s[i] != '\f' 
+			&& s[i] != '\r' && s[i] != ' ' && s[i] != '\v')
+			return (false);
+		i++;
 	}
 	return (true);
 }

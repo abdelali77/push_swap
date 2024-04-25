@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 22:38:50 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/03/31 00:29:05 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/25 15:19:42 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	swap_stack(t_stack **lst)
 {
 	int	tmp;
 
+	if (lst == NULL || *lst == NULL || (*lst)->next == NULL)
+		return ;
 	tmp = (*lst)->value;
 	(*lst)->value = (*lst)->next->value;
 	(*lst)->next->value = tmp;

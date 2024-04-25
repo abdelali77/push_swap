@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 15:46:22 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/24 22:48:32 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/25 15:03:30 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 # include <unistd.h>
 # include <limits.h>
 # include <stdbool.h>
-#include <stdio.h>
-#include <string.h>
 
 typedef struct stack_node
 {
@@ -48,18 +46,17 @@ char	**ft_split(char const *s, char c);
 long	str_to_long(char *s);
 int		check_valid_integer(char *s);
 int		check_duplicate(t_stack *stack, long nbr);
-bool	is_sorted(t_stack **stack);
+bool	is_sorted(t_stack *stack);
 void	check_algo(t_stack **a, t_stack **b);
-size_t	stack_size(t_stack **lst);
+size_t	stack_size(t_stack *lst);
 void	sort_stack(t_stack **a, t_stack **b, int range);
 void	indexing_stack(t_stack *stack);
 t_stack	*find_last_node(t_stack *last_node);
-t_stack	*min_el(t_stack **lst);
-t_stack	*max_el(t_stack **lst);
+t_stack	*min_el(t_stack *lst);
+t_stack	*max_el(t_stack *lst);
 void	error(void);
 void	re_index(t_stack *stack);
 bool	is_only_space(char *s);
-int		ft_isspace(int c);
 void	swap_stack(t_stack **lst);
 void	ft_push(t_stack **lst, t_stack **new);
 void	reverse_rotate(t_stack **lst);
