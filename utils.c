@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 15:00:01 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/25 13:33:44 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/25 23:16:04 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,8 @@ bool	is_sorted(t_stack *stack)
 {
 	t_stack	*tmp;
 
+	if (stack == NULL)
+		return (false);
 	tmp = stack;
 	while (tmp->next)
 	{

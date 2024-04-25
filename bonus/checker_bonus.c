@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 12:04:53 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/25 15:59:58 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/25 23:13:11 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ int	main(int argc, char **argv)
 	a = NULL;
 	b = NULL;
 	if (argc == 1)
-		return (1);
+		return (0);
 	else if (argc == 2 && argv[1][0] == '\0')
 		error();
 	else if (argc == 2)
