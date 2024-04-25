@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/19 00:51:09 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/23 11:37:04 by abmahfou         ###   ########.fr       */
+/*   Created: 2024/04/24 15:46:22 by abmahfou          #+#    #+#             */
+/*   Updated: 2024/04/24 22:48:32 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <unistd.h>
 # include <limits.h>
 # include <stdbool.h>
+#include <stdio.h>
+#include <string.h>
 
 typedef struct stack_node
 {
@@ -56,5 +58,11 @@ t_stack	*min_el(t_stack **lst);
 t_stack	*max_el(t_stack **lst);
 void	error(void);
 void	re_index(t_stack *stack);
+bool	is_only_space(char *s);
+int		ft_isspace(int c);
+void	swap_stack(t_stack **lst);
+void	ft_push(t_stack **lst, t_stack **new);
+void	reverse_rotate(t_stack **lst);
+void	rotate_stack(t_stack **lst);
 
 #endif
