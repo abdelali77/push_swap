@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 13:23:54 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/23 11:35:32 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/25 13:07:28 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ void	sort_stack_extra(t_stack **a, t_stack **b)
 	while (*b)
 	{
 		re_index(*b);
-		while (*b != max_el(b))
+		while (*b != max_el(*b))
 		{
-			if (max_el(b)->index < stack_size(b) / 2)
+			if (max_el(*b)->index < stack_size(*b) / 2)
 				_rb(b);
 			else
 				_rrb(b);
