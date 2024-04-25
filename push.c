@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 18:18:02 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/22 15:28:55 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/25 15:22:36 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_push(t_stack **lst, t_stack **new)
 {
 	t_stack	*tmp;
 
+	if (lst == NULL || *lst == NULL || new == NULL)
+		return ;
 	tmp = *lst;
 	*lst = (*lst)->next;
 	tmp->next = *new;

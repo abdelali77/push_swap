@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 16:49:30 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/03/27 22:42:31 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/25 15:21:00 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	reverse_rotate(t_stack **lst)
 {
-	t_stack	*first_node;
 	t_stack	*last_node;
 	t_stack	*prev;
 
-	first_node = *lst;
+	if (lst == NULL || *lst == NULL || (*lst)->next == NULL)
+		return ;
 	last_node = *lst;
 	prev = last_node;
 	while (last_node->next != NULL)
