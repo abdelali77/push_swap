@@ -6,12 +6,11 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 12:04:53 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/25 23:13:11 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/26 15:33:32 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
-#include "./get_next_line/get_next_line.h"
+#include "header_bonus.h"
 
 bool	ft_strncmp(char *s1, char *s2, int n)
 {
