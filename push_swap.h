@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 15:46:22 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/25 15:03:30 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/27 15:16:53 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,8 @@ void	_pb(t_stack **lst, t_stack **new);
 
 char	**ft_split(char const *s, char c);
 long	str_to_long(char *s);
-int		check_valid_integer(char *s);
-int		check_duplicate(t_stack *stack, long nbr);
+bool	check_valid_integer(char *s);
+bool	check_duplicate(t_stack *stack, long nbr);
 bool	is_sorted(t_stack *stack);
 void	check_algo(t_stack **a, t_stack **b);
 size_t	stack_size(t_stack *lst);

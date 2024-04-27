@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 22:23:47 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/25 13:07:15 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/27 12:31:11 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	sort_stack_4_5(t_stack **a, t_stack **b)
 	_pb(a, b);
 	while (min_el(*a) != *a)
 	{
-		if (min_el(*a)->index > 2)
+		if (min_el(*a)->index >= 2)
 			_rra(a);
 		else
 			_ra(a);
