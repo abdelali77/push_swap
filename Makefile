@@ -6,7 +6,7 @@
 #    By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/18 22:15:23 by abmahfou          #+#    #+#              #
-#    Updated: 2024/04/25 18:13:11 by abmahfou         ###   ########.fr        #
+#    Updated: 2024/04/27 11:51:30 by abmahfou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,8 @@ SRC_B = bonus/checker_bonus.c \
 
 OBJS = $(SRC:.c=.o)
 
+MAIN_OBJ = $(MAIN:.c=.o)
+
 OBJS_B = $(SRC_B:.c=.o)
 
 HEADER = push_swap.h
@@ -48,8 +50,8 @@ all: $(NAME)
 %.o: %.c $(HEADER)
 	$(CC) -c $(CFLAGS) $< -o $@
 
-$(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(MAIN) $(OBJS) -o $(NAME)
+$(NAME): $(OBJS) $(MAIN_OBJ)
+	$(CC) $(CFLAGS) $(MAIN_OBJ) $(OBJS) -o $(NAME)
 	@echo " ██▓███   █    ██   ██████  ██░ ██   ██████  █     █░ ▄▄▄       ██▓███  "
 	@echo "▓██░  ██▒ ██  ▓██▒▒██    ▒ ▓██░ ██▒▒██    ▒ ▓█░ █ ░█░▒████▄    ▓██░  ██▒"
 	@echo "▓██░ ██▓▒▓██  ▒██░░ ▓██▄   ▒██▀▀██░░ ▓██▄   ▒█░ █ ░█ ▒██  ▀█▄  ▓██░ ██▓▒"
@@ -77,7 +79,7 @@ $(NAME_BONUS): $(OBJS) $(OBJS_B)
 bonus:	$(NAME_BONUS)
 
 clean:
-	$(RM) $(OBJS) $(OBJS_B)
+	$(RM) $(OBJS) $(OBJS_B) $(MAIN_OBJ)
 
 fclean: clean
 	$(RM) $(NAME) $(NAME_BONUS)
