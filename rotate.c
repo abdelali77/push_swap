@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 17:52:10 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/25 15:21:15 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/27 19:49:12 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	rotate_stack(t_stack **lst)
 		return ;
 	first_node = *lst;
 	last_node = *lst;
-	while (last_node->next != NULL)
+	while (last_node->next)
 		last_node = last_node->next;
 	*lst = first_node->next;
 	first_node->next = NULL;
