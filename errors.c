@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 23:42:52 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/23 12:35:15 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/27 15:15:09 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	error(void)
 	exit(1);
 }
 
-int	check_valid_integer(char *s)
+bool	check_valid_integer(char *s)
 {
 	int	i;
 
@@ -30,20 +30,20 @@ int	check_valid_integer(char *s)
 		if (s[i] >= '0' && s[i] <= '9')
 			i++;
 		else
-			return (0);
+			return (false);
 	}
-	return (1);
+	return (true);
 }
 
-int	check_duplicate(t_stack *stack, long nbr)
+bool	check_duplicate(t_stack *stack, long nbr)
 {
 	if (stack == NULL)
-		return (0);
+		return (false);
 	while (stack)
 	{
 		if (stack->value == nbr)
-			return (1);
+			return (true);
 		stack = stack->next;
 	}
-	return (0);
+	return (false);
 }
