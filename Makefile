@@ -6,7 +6,7 @@
 #    By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/18 22:15:23 by abmahfou          #+#    #+#              #
-#    Updated: 2024/04/27 11:51:30 by abmahfou         ###   ########.fr        #
+#    Updated: 2024/04/29 21:34:19 by abmahfou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,9 @@ SRC = split.c \
       errors.c \
 	  algo.c \
 	  algo2.c \
-	  utils.c
+	  utils.c \
+	  free_stack.c \
+	  utils2.c 
 
 SRC_B = bonus/checker_bonus.c \
 		bonus/get_next_line/get_next_line.c \
