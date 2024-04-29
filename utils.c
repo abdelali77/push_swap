@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 15:00:01 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/25 23:16:04 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/29 19:30:43 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ bool	is_sorted(t_stack *stack)
 	return (true);
 }
 
-bool	is_only_space(char *s)
+bool	is_only_spaces(char *s)
 {
 	int	i;
 
