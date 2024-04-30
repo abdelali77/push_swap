@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 15:46:22 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/29 21:29:04 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/30 11:34:30 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ void	ft_push(t_stack **lst, t_stack **new);
 void	reverse_rotate(t_stack **lst);
 void	rotate_stack(t_stack **lst);
 void	free_mem(char **split);
+void	ft_free(t_stack *stack);
 bool	ft_strncmp(char *s1, char *s2, int n);
 void	iterate(int argc, char **argv, t_stack **a);
 
