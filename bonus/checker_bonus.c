@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 12:04:53 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/29 21:41:46 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/04/30 11:36:22 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,4 +90,5 @@ int	main(int argc, char **argv)
 	else
 		iterate(argc, argv, &a);
 	read_move(&a, &b);
+	ft_free(a);
 }
