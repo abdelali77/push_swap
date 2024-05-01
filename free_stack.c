@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 20:10:47 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/30 11:36:07 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/05/01 14:56:53 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_free(t_stack *stack)
 {
 	t_stack	*tmp;
 
+	if (stack == NULL)
+		return ;
 	while (stack)
 	{
 		tmp = stack;
