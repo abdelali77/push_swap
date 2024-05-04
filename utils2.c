@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 21:28:01 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/29 21:30:45 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/05/04 16:28:51 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	iterate(int argc, char **argv, t_stack **a)
 	while (i < argc)
 	{
 		if (is_only_spaces(argv[i]))
-			error();
+			error(a);
 		args = ft_split(argv[i], ' ');
 		stack_init(a, args);
 		free_mem(args);

@@ -6,13 +6,13 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 15:00:01 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/29 19:30:43 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/05/04 17:44:07 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-long	str_to_long(char *s)
+long	str_to_long(char *s, t_stack **stack)
 {
 	int		i;
 	int		sign;
@@ -27,7 +27,7 @@ long	str_to_long(char *s)
 	if (s[i] == '-' || s[i] == '+')
 	{
 		if (s[i + 1] == '\0')
-			error();
+			error(stack);
 		if (s[i] == '-')
 			sign *= -1;
 		i++;

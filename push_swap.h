@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 15:46:22 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/30 11:34:30 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/05/04 17:43:06 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	_pa(t_stack **lst, t_stack **new);
 void	_pb(t_stack **lst, t_stack **new);
 
 char	**ft_split(char const *s, char c);
-long	str_to_long(char *s);
+long	str_to_long(char *s, t_stack **stack);
 bool	check_valid_integer(char *s);
 bool	check_duplicate(t_stack *stack, long nbr);
 bool	is_sorted(t_stack *stack);
@@ -54,7 +54,7 @@ void	indexing_stack(t_stack *stack);
 t_stack	*find_last_node(t_stack *last_node);
 t_stack	*min_el(t_stack *lst);
 t_stack	*max_el(t_stack *lst);
-void	error(void);
+void	error(t_stack **a);
 void	re_index(t_stack *stack);
 bool	is_only_spaces(char *s);
 void	swap_stack(t_stack **lst);

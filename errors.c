@@ -6,15 +6,16 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 23:42:52 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/27 15:15:09 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/05/04 17:42:02 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	error(void)
+void	error(t_stack **a)
 {
 	write(2, "Error\n", 6);
+	ft_free(*a);
 	exit(1);
 }
 

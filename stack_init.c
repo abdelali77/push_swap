@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 00:35:02 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/04/27 21:14:26 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/05/04 17:43:53 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,10 @@ void	stack_init(t_stack **stack_a, char **argv)
 	while (argv[i])
 	{
 		if (!check_valid_integer(argv[i]))
-			error();
-		nbr = str_to_long(argv[i]);
+			error(stack_a);
+		nbr = str_to_long(argv[i], stack_a);
 		if ((nbr < INT_MIN || nbr > INT_MAX) || check_duplicate(*stack_a, nbr))
-			error();
+			error(stack_a);
 		append_node(stack_a, nbr);
 		i++;
 	}
