@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 12:04:53 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/05/02 10:47:12 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/05/04 17:56:23 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,11 +85,10 @@ int	main(int argc, char **argv)
 	b = NULL;
 	if (argc == 1)
 		return (0);
-	else if (argc == 2 && argv[1][0] == '\0')
-		error();
 	else
 		iterate(argc, argv, &a);
 	read_move(&a, &b);
 	ft_free(a);
 	ft_free(b);
+	return (0);
 }
