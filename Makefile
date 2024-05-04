@@ -6,7 +6,7 @@
 #    By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/18 22:15:23 by abmahfou          #+#    #+#              #
-#    Updated: 2024/04/29 21:34:19 by abmahfou         ###   ########.fr        #
+#    Updated: 2024/05/04 17:46:18 by abmahfou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,8 +36,8 @@ SRC = split.c \
 	  utils2.c 
 
 SRC_B = bonus/checker_bonus.c \
-		bonus/get_next_line/get_next_line.c \
-		bonus/get_next_line/get_next_line_utils.c
+		bonus/get_next_line/get_next_line_bonus.c \
+		bonus/get_next_line/get_next_line_utils_bonus.c
 
 OBJS = $(SRC:.c=.o)
 
