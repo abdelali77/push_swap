@@ -6,7 +6,7 @@
 #    By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/18 22:15:23 by abmahfou          #+#    #+#              #
-#    Updated: 2024/05/04 17:46:18 by abmahfou         ###   ########.fr        #
+#    Updated: 2024/05/06 23:17:33 by abmahfou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,10 +46,11 @@ MAIN_OBJ = $(MAIN:.c=.o)
 OBJS_B = $(SRC_B:.c=.o)
 
 HEADER = push_swap.h
+HEADER_B = bonus/header_bonus.h
 
 all: $(NAME)
 
-%.o: %.c $(HEADER)
+%.o: %.c $(HEADER) $(HEADER_B)
 	$(CC) -c $(CFLAGS) $< -o $@
 
 $(NAME): $(OBJS) $(MAIN_OBJ)
